@@ -1,5 +1,5 @@
-BinarySearchTreeTest.o: BinarySearchTreeTest.cpp
+BinarySearchTreeTest: BinarySearchTreeTest.cpp
 	gcc BinarySearchTreeTest.cpp -lstdc++ -o bin/BinarySearchTreeTest
 
 clean:
-	rm -f BinarySearchTreeTest.o
+	rm -f bin/BinarySearchTreeTest
