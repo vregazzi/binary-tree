@@ -66,6 +66,30 @@ public:
         return root->contains(x);
     }
 
+    Comparable find_min()
+    {
+        if (root == nullptr)
+        {
+            throw std::logic_error("find_min::Empty Binary Tree");
+        }
+        else
+        {
+            return root->find_min();
+        }
+    }
+
+    Comparable find_max()
+    {
+        if (root == nullptr)
+        {
+            throw std::logic_error("find_max::Empty Binary Tree");
+        }
+        else
+        {
+            return root->find_max();
+        }
+    }
+
     /**
      * @brief print the tree using "depthorder" traversal
      */
