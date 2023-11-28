@@ -61,6 +61,18 @@ public:
         }
     }
 
+    int height() const
+    {
+        if (root == nullptr)
+        {
+            return -1;
+        }
+        else
+        {
+            return root->m_height;
+        }
+    }
+
     bool contains(const Comparable &x)
     {
         return root->contains(x);
@@ -103,7 +115,7 @@ public:
         {
             // the possible depth values for the tree run from
             // 0 for the root of the tree to the height of the tree
-            int tree_height = root->height();
+            int tree_height = height();
             std::cout << "Tree Height: " << tree_height << std::endl;
             for (int i = 0; i <= tree_height; ++i)
             {
