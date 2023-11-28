@@ -61,6 +61,11 @@ public:
         }
     }
 
+    bool contains(const Comparable &x)
+    {
+        return root->contains(x);
+    }
+
     /**
      * @brief print the tree using "depthorder" traversal
      */
