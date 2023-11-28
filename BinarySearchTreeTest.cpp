@@ -4,8 +4,8 @@ using namespace std;
 
 int simple_insertion()
 {
-    BinarySearchTree<int> tree;
     cout << "Simple insertion testing" << endl;
+    BinarySearchTree<int> tree;
     tree.insert(17);
     tree.insert(25);
     tree.insert(4);
@@ -57,7 +57,71 @@ int simple_insertion()
     return 0;
 }
 
+void LL_insert_test()
+{
+    cout << "LL insert test" << endl;
+    BinarySearchTree<int> tree;
+    tree.insert(17);
+    tree.insert(25);
+    tree.insert(12);
+    tree.insert(10);
+    tree.insert(27);
+    tree.insert(9);
+
+    tree.depthorder_print();
+    cout << endl;
+}
+
+void LR_insert_test()
+{
+    cout << "LR insert test" << endl;
+    BinarySearchTree<int> tree;
+    tree.insert(17);
+    tree.insert(25);
+    tree.insert(12);
+    tree.insert(10);
+    tree.insert(27);
+    tree.insert(11);
+
+    tree.depthorder_print();
+    cout << endl;
+}
+
+void RR_insert_test()
+{
+    cout << "RR insert test" << endl;
+    BinarySearchTree<int> tree;
+    tree.insert(17);
+    tree.insert(25);
+    tree.insert(12);
+    tree.insert(10);
+    tree.insert(27);
+    tree.insert(30);
+
+    tree.depthorder_print();
+    cout << endl;
+}
+
+void RL_insert_test()
+{
+    cout << "RL insert test" << endl;
+    BinarySearchTree<int> tree;
+    tree.insert(17);
+    tree.insert(25);
+    tree.insert(12);
+    tree.insert(10);
+    tree.insert(27);
+    tree.insert(26);
+
+    tree.depthorder_print();
+    cout << endl;
+}
+
 int main()
 {
     simple_insertion();
+    LL_insert_test();
+    LR_insert_test();
+    RR_insert_test();
+    RL_insert_test();
 }
