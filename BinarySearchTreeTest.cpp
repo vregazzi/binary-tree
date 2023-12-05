@@ -66,6 +66,7 @@ void LL_insert_test()
     tree.insert(12);
     tree.insert(10);
     tree.insert(27);
+    tree.depthorder_print();
     tree.insert(9);
 
     tree.depthorder_print();
@@ -81,6 +82,7 @@ void LR_insert_test()
     tree.insert(12);
     tree.insert(10);
     tree.insert(27);
+    tree.depthorder_print();
     tree.insert(11);
 
     tree.depthorder_print();
@@ -96,6 +98,7 @@ void RR_insert_test()
     tree.insert(12);
     tree.insert(10);
     tree.insert(27);
+    tree.depthorder_print();
     tree.insert(30);
 
     tree.depthorder_print();
@@ -111,6 +114,7 @@ void RL_insert_test()
     tree.insert(12);
     tree.insert(10);
     tree.insert(27);
+    tree.depthorder_print();
     tree.insert(26);
 
     tree.depthorder_print();

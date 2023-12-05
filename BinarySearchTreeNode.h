@@ -257,5 +257,53 @@ BinarySearchTreeNode<Comparable> *insert_node(
     }
     node->update_height();
     int balance = calculate_balance(node);
+    if (balance > 1)
+    {
+        if (value_to_insert < node->m_left->m_value)
+        {
+            node = right_rotate(node);
+        }
+        else
+        {
+            node->m_left = left_rotate(node->m_left);
+            node = right_rotate(node);
+        }
+    }
+    else if (balance < -1)
+    {
+        if (value_to_insert > node->m_right->m_value)
+        {
+            node = left_rotate(node);
+        }
+        else
+        {
+            node->m_right = right_rotate(node->m_right);
+            node = left_rotate(node);
+        }
+    }
     return node;
+}
+
+template <typename Comparable>
+BinarySearchTreeNode<Comparable> *left_rotate(
+    BinarySearchTreeNode<Comparable> *node)
+{
+    BinarySearchTreeNode<Comparable> *new_root = node->m_right;
+    node->m_right = new_root->m_left;
+    new_root->m_left = node;
+    node->update_height();
+    new_root->update_height();
+    return new_root;
+}
+
+template <typename Comparable>
+BinarySearchTreeNode<Comparable> *right_rotate(
+    BinarySearchTreeNode<Comparable> *node)
+{
+    BinarySearchTreeNode<Comparable> *new_root = node->m_left;
+    node->m_left = new_root->m_right;
+    new_root->m_right = node;
+    node->update_height();
+    new_root->update_height();
+    return new_root;
 }
